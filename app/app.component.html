@@ -1,0 +1,14 @@
+<header>
+  <h1>Weather Forecast App</h1>
+</header>
+
+<main>
+  <form [formGroup]="weatherForm" (ngSubmit)="onSubmit($event)">
+    <input type="text" formControlName="userLocationInput">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <ng-template [ngIf]="tempData">
+    <div id="forecast"></div>
+  </ng-template>
+</main>
